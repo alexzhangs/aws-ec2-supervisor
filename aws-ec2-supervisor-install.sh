@@ -50,7 +50,10 @@ echo_supervisord_conf \
           -e 's|;files = .*|files = /etc/supervisor/conf.d/*.ini|' \
           > /etc/supervisord.conf
 
-curl -sL https://raw.githubusercontent.com/alexzhangs/supervisord/master/supervisord -o /etc/init.d/supervisord
-chmod 755 /etc/init.d/supervisord
+if [[ $initd_script -eq 1 ]]; then
+    curl -sL https://raw.githubusercontent.com/alexzhangs/supervisord/master/supervisord -o /etc/init.d/supervisord
+    chmod 755 /etc/init.d/supervisord
+    chkconfig supervisord on
+fi
 
 exit
