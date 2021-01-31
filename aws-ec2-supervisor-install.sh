@@ -51,6 +51,7 @@ echo_supervisord_conf \
           > /etc/supervisord.conf
 
 if [[ $initd_script -eq 1 ]]; then
+    # reference: https://github.com/alexzhangs/supervisord
     curl -sL https://raw.githubusercontent.com/alexzhangs/supervisord/master/supervisord -o /etc/init.d/supervisord
     chmod 755 /etc/init.d/supervisord
     chkconfig supervisord on
