@@ -28,7 +28,7 @@ usage () {
 
 package=supervisor
 
-while getopts i:v:h opt; do
+while getopts iv:h opt; do
     case $opt in
         i)
             initd_script=1
