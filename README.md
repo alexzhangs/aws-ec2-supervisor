@@ -1,5 +1,7 @@
 # aws-ec2-supervisor
 
+**This repo is deprecated. It's function has been moved to [xsh-lib/aws](https://github.com/xsh-lib/aws) `/functions/gist/ec2/linux/installer/supervisor`.**
+
 Install supervisor on AWS EC2 instance.
 
 ## Get code
